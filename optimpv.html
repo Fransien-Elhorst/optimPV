@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>optimpv package &mdash; optimpv 1.04 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/rtd_sphinx_search.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=0c049bae" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=266c65b7"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/js/rtd_search_config.js"></script>
+      <script src="_static/js/rtd_sphinx_search.min.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="optimpv.BayesInfEmcee package" href="optimpv.BayesInfEmcee.html" />
+    <link rel="prev" title="optimpv" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/optimPV_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Drift-diffusion:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/JV_realOPV.html">OPV light-intensity dependant JV fits with SIMsalabim (real data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/JV_fakePerovskite.html">Perovskite light-intensity dependant JV fits with SIMsalabim (fake data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/MO_hysteresis_fakePerovskite.html">Multi-objective BO: Perovskite hysteresis JV fits with SIMsalabim (fake data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/MO_JV_impedance_fakePerovskite.html">Multi-objective BO: Perovskite light-intensity dependant JV and impedance fits with SIMsalabim (fake data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notebook_gallery_DD.html">Notebook gallery DD fits</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Transfer Matrix:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/TransferMatrix.html">Layer stack optimization with Transfer Matrix Method (TMM)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Rate equation models:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/TAS.html">Transient absorption spectroscopy fits with rate equation (fake data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/MO_trPL_trMC.html">Multi-objective BO: Fit of transient photoluminescence (TrPL) and transient microwave conductivity (trMC) with rate equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/TrPL_diff.html">Fit of transient photoluminescence (TrPL) with diffusion and recombination model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Design of experiments:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/Exp_design.html">Design of Experiment: Optimize perovskite solar cells efficiency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Exp_design_turbo.html">Design of Experiment: Optimize perovskite solar cells efficiency (TURBO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Exp_design_MOO.html">Design of Experiment: perovskite thin film optimization PLQY and FWHM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/Exp_design_MOO_pymoo.html">Design of Experiment: perovskite thin film optimization PLQY and FWHM (pymoo)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Non-ideal diode models:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/diode.html">Fit non ideal diode equation to dark or light JV-curve</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Notebook gallery:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Notebook_gallery.html">All notebooks</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Change Log</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">optimpv</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">optimpv package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html">optimpv.BayesInfEmcee package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html">optimpv.DDfits package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.Diodefits.html">optimpv.Diodefits package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.RateEqfits.html">optimpv.RateEqfits package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.TransferMatrix.html">optimpv.TransferMatrix package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html">optimpv.axBOtorch package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html">optimpv.general package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.posterior.html">optimpv.posterior package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html">optimpv.pymooOpti package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html">optimpv.scipyOpti package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.tests.html">optimpv.tests package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-optimpv">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">optimpv</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">optimpv</a></li>
+      <li class="breadcrumb-item active">optimpv package</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/openPV-lab/optimPV/blob/main/docs/source/optimpv.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="optimpv-package">
+<h1>optimpv package<a class="headerlink" href="#optimpv-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.BayesInfEmcee.html">optimpv.BayesInfEmcee package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.BayesInfEmcee.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.BayesInfEmcee.html#module-optimpv.BayesInfEmcee.EmceeOptimizer">optimpv.BayesInfEmcee.EmceeOptimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.create_metrics_list"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.create_metrics_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.create_search_space"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.create_search_space()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.get_best_params"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.get_best_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.get_chain"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.get_chain()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.get_flat_samples"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.get_flat_samples()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.initialize_walkers"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.initialize_walkers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.optimize"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.optimize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.plot_corner"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.plot_corner()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.plot_traces"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.plot_traces()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.reconstruct_params"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.reconstruct_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.BayesInfEmcee.html#optimpv.BayesInfEmcee.EmceeOptimizer.EmceeOptimizer.update_params_with_best_balance"><code class="docutils literal notranslate"><span class="pre">EmceeOptimizer.update_params_with_best_balance()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.BayesInfEmcee.html#module-optimpv.BayesInfEmcee">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.DDfits.html">optimpv.DDfits package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.old.html">optimpv.DDfits.old package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old.CVAgent">optimpv.DDfits.old.CVAgent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old.HysteresisAgent">optimpv.DDfits.old.HysteresisAgent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old.IMPSAgent">optimpv.DDfits.old.IMPSAgent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old.ImpedanceAgent">optimpv.DDfits.old.ImpedanceAgent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old.JVAgent">optimpv.DDfits.old.JVAgent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old.SIMsalabimAgent">optimpv.DDfits.old.SIMsalabimAgent module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.old.html#module-optimpv.DDfits.old">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits.CVAgent">optimpv.DDfits.CVAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.CVAgent.CVAgent"><code class="docutils literal notranslate"><span class="pre">CVAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.CVAgent.CVAgent.reformat_CV_data"><code class="docutils literal notranslate"><span class="pre">CVAgent.reformat_CV_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.CVAgent.CVAgent.run"><code class="docutils literal notranslate"><span class="pre">CVAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.CVAgent.CVAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">CVAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.CVAgent.CVAgent.run_CV_simulation"><code class="docutils literal notranslate"><span class="pre">CVAgent.run_CV_simulation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.CVAgent.CVAgent.target_metric"><code class="docutils literal notranslate"><span class="pre">CVAgent.target_metric()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits.HysteresisAgent">optimpv.DDfits.HysteresisAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.HysteresisAgent.HysteresisAgent"><code class="docutils literal notranslate"><span class="pre">HysteresisAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.HysteresisAgent.HysteresisAgent.reformat_hysteresis_data"><code class="docutils literal notranslate"><span class="pre">HysteresisAgent.reformat_hysteresis_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.HysteresisAgent.HysteresisAgent.run"><code class="docutils literal notranslate"><span class="pre">HysteresisAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.HysteresisAgent.HysteresisAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">HysteresisAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.HysteresisAgent.HysteresisAgent.run_hysteresis_simulation"><code class="docutils literal notranslate"><span class="pre">HysteresisAgent.run_hysteresis_simulation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.HysteresisAgent.HysteresisAgent.target_metric"><code class="docutils literal notranslate"><span class="pre">HysteresisAgent.target_metric()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits.IMPSAgent">optimpv.DDfits.IMPSAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.IMPSAgent.IMPSAgent"><code class="docutils literal notranslate"><span class="pre">IMPSAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.IMPSAgent.IMPSAgent.reformat_IMPS_data"><code class="docutils literal notranslate"><span class="pre">IMPSAgent.reformat_IMPS_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.IMPSAgent.IMPSAgent.run"><code class="docutils literal notranslate"><span class="pre">IMPSAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.IMPSAgent.IMPSAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">IMPSAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.IMPSAgent.IMPSAgent.run_IMPS_simulation"><code class="docutils literal notranslate"><span class="pre">IMPSAgent.run_IMPS_simulation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.IMPSAgent.IMPSAgent.target_metric"><code class="docutils literal notranslate"><span class="pre">IMPSAgent.target_metric()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits.ImpedanceAgent">optimpv.DDfits.ImpedanceAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.ImpedanceAgent.ImpedanceAgent"><code class="docutils literal notranslate"><span class="pre">ImpedanceAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.ImpedanceAgent.ImpedanceAgent.reformat_impedance_data"><code class="docutils literal notranslate"><span class="pre">ImpedanceAgent.reformat_impedance_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.ImpedanceAgent.ImpedanceAgent.run"><code class="docutils literal notranslate"><span class="pre">ImpedanceAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.ImpedanceAgent.ImpedanceAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">ImpedanceAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.ImpedanceAgent.ImpedanceAgent.run_impedance_simulation"><code class="docutils literal notranslate"><span class="pre">ImpedanceAgent.run_impedance_simulation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.ImpedanceAgent.ImpedanceAgent.target_metric"><code class="docutils literal notranslate"><span class="pre">ImpedanceAgent.target_metric()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits.JVAgent">optimpv.DDfits.JVAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.JVAgent.JVAgent"><code class="docutils literal notranslate"><span class="pre">JVAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.JVAgent.JVAgent.reformat_JV_data"><code class="docutils literal notranslate"><span class="pre">JVAgent.reformat_JV_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.JVAgent.JVAgent.run"><code class="docutils literal notranslate"><span class="pre">JVAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.JVAgent.JVAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">JVAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.JVAgent.JVAgent.run_JV"><code class="docutils literal notranslate"><span class="pre">JVAgent.run_JV()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.JVAgent.JVAgent.target_metric"><code class="docutils literal notranslate"><span class="pre">JVAgent.target_metric()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits.SIMsalabimAgent">optimpv.DDfits.SIMsalabimAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.Gamma_pre_reset"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.Gamma_pre_reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.ambi_param_transform"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.ambi_param_transform()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.check_duplicated_parameters"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.check_duplicated_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.convert_parameter_to_basename"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.convert_parameter_to_basename()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.energy_level_offsets"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.energy_level_offsets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.get_SIMsalabim_clean_cmd"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.get_SIMsalabim_clean_cmd()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.get_SIMsalabim_clean_cmd_pars"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.get_SIMsalabim_clean_cmd_pars()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.is_inputFile"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.is_inputFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.package_SIMsalabim_files"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.package_SIMsalabim_files()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.DDfits.html#optimpv.DDfits.SIMsalabimAgent.SIMsalabimAgent.prepare_cmd_pars"><code class="docutils literal notranslate"><span class="pre">SIMsalabimAgent.prepare_cmd_pars()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.DDfits.html#module-optimpv.DDfits">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.Diodefits.html">optimpv.Diodefits package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.Diodefits.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.Diodefits.html#module-optimpv.Diodefits.DiodeAgent">optimpv.Diodefits.DiodeAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.Diodefits.html#optimpv.Diodefits.DiodeAgent.DiodeAgent"><code class="docutils literal notranslate"><span class="pre">DiodeAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.Diodefits.html#optimpv.Diodefits.DiodeAgent.DiodeAgent.run"><code class="docutils literal notranslate"><span class="pre">DiodeAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.Diodefits.html#optimpv.Diodefits.DiodeAgent.DiodeAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">DiodeAgent.run_Ax()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.Diodefits.html#module-optimpv.Diodefits.DiodeModel">optimpv.Diodefits.DiodeModel module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.Diodefits.html#optimpv.Diodefits.DiodeModel.NonIdealDiode_dark"><code class="docutils literal notranslate"><span class="pre">NonIdealDiode_dark()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.Diodefits.html#optimpv.Diodefits.DiodeModel.NonIdealDiode_light"><code class="docutils literal notranslate"><span class="pre">NonIdealDiode_light()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.Diodefits.html#module-optimpv.Diodefits">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.RateEqfits.html">optimpv.RateEqfits package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.RateEqfits.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.RateEqfits.html#module-optimpv.RateEqfits.Pumps">optimpv.RateEqfits.Pumps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.Pumps.gaussian_pulse_norm"><code class="docutils literal notranslate"><span class="pre">gaussian_pulse_norm()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.Pumps.gaussian_pump"><code class="docutils literal notranslate"><span class="pre">gaussian_pump()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.Pumps.get_flux_density"><code class="docutils literal notranslate"><span class="pre">get_flux_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.Pumps.initial_carrier_density"><code class="docutils literal notranslate"><span class="pre">initial_carrier_density()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.Pumps.square_pump"><code class="docutils literal notranslate"><span class="pre">square_pump()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.RateEqfits.html#module-optimpv.RateEqfits.RateEqAgent">optimpv.RateEqfits.RateEqAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqAgent.RateEqAgent"><code class="docutils literal notranslate"><span class="pre">RateEqAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqAgent.RateEqAgent.reformat_data"><code class="docutils literal notranslate"><span class="pre">RateEqAgent.reformat_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqAgent.RateEqAgent.run"><code class="docutils literal notranslate"><span class="pre">RateEqAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqAgent.RateEqAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">RateEqAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqAgent.RateEqAgent.run_RateEq"><code class="docutils literal notranslate"><span class="pre">RateEqAgent.run_RateEq()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.RateEqfits.html#module-optimpv.RateEqfits.RateEqModel">optimpv.RateEqfits.RateEqModel module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqModel.BTD_model"><code class="docutils literal notranslate"><span class="pre">BTD_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqModel.BT_model"><code class="docutils literal notranslate"><span class="pre">BT_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqModel.DBTD_model"><code class="docutils literal notranslate"><span class="pre">DBTD_model()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.RateEqfits.html#optimpv.RateEqfits.RateEqModel.DBTD_multi_trap"><code class="docutils literal notranslate"><span class="pre">DBTD_multi_trap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.RateEqfits.html#module-optimpv.RateEqfits">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.TransferMatrix.html">optimpv.TransferMatrix package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.TransferMatrix.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.TransferMatrix.html#module-optimpv.TransferMatrix.TransferMatrixAgent">optimpv.TransferMatrix.TransferMatrixAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixAgent.TransferMatrixAgent"><code class="docutils literal notranslate"><span class="pre">TransferMatrixAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixAgent.TransferMatrixAgent.run"><code class="docutils literal notranslate"><span class="pre">TransferMatrixAgent.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixAgent.TransferMatrixAgent.run_Ax"><code class="docutils literal notranslate"><span class="pre">TransferMatrixAgent.run_Ax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixAgent.TransferMatrixAgent.target_metric"><code class="docutils literal notranslate"><span class="pre">TransferMatrixAgent.target_metric()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.TransferMatrix.html#module-optimpv.TransferMatrix.TransferMatrixModel">optimpv.TransferMatrix.TransferMatrixModel module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixModel.I_mat"><code class="docutils literal notranslate"><span class="pre">I_mat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixModel.L_mat"><code class="docutils literal notranslate"><span class="pre">L_mat()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixModel.TMM"><code class="docutils literal notranslate"><span class="pre">TMM()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixModel.get_ntotal"><code class="docutils literal notranslate"><span class="pre">get_ntotal()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.TransferMatrix.html#optimpv.TransferMatrix.TransferMatrixModel.openFile"><code class="docutils literal notranslate"><span class="pre">openFile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.TransferMatrix.html#module-optimpv.TransferMatrix">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.axBOtorch.html">optimpv.axBOtorch package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.axBOtorch.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.axBOtorch.html#module-optimpv.axBOtorch.EGBO">optimpv.axBOtorch.EGBO module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.EGBO.EGBOAcquisition"><code class="docutils literal notranslate"><span class="pre">EGBOAcquisition</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.EGBO.EGBOAcquisition.optimize"><code class="docutils literal notranslate"><span class="pre">EGBOAcquisition.optimize()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.axBOtorch.html#module-optimpv.axBOtorch.axBOtorchOptimizer">optimpv.axBOtorch.axBOtorchOptimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState"><code class="docutils literal notranslate"><span class="pre">TurboState</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.acceleration"><code class="docutils literal notranslate"><span class="pre">TurboState.acceleration</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.batch_size"><code class="docutils literal notranslate"><span class="pre">TurboState.batch_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.best_value"><code class="docutils literal notranslate"><span class="pre">TurboState.best_value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.dim"><code class="docutils literal notranslate"><span class="pre">TurboState.dim</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.failure_counter"><code class="docutils literal notranslate"><span class="pre">TurboState.failure_counter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.failure_tolerance"><code class="docutils literal notranslate"><span class="pre">TurboState.failure_tolerance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.length"><code class="docutils literal notranslate"><span class="pre">TurboState.length</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.length_max"><code class="docutils literal notranslate"><span class="pre">TurboState.length_max</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.length_min"><code class="docutils literal notranslate"><span class="pre">TurboState.length_min</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.restart_triggered"><code class="docutils literal notranslate"><span class="pre">TurboState.restart_triggered</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.success_counter"><code class="docutils literal notranslate"><span class="pre">TurboState.success_counter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.TurboState.success_tolerance"><code class="docutils literal notranslate"><span class="pre">TurboState.success_tolerance</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.attach_existing_data"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.attach_existing_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.create_generation_strategy"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.create_generation_strategy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.create_objectives"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.create_objectives()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.evaluate"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.evaluate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.get_initial_data_from_existing_data_turbo"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.get_initial_data_from_existing_data_turbo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.get_tracking_metrics"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.get_tracking_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.optimize"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.optimize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.optimize_sequential"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.optimize_sequential()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.optimize_turbo"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.optimize_turbo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.axBOtorchOptimizer.update_params_with_best_balance"><code class="docutils literal notranslate"><span class="pre">axBOtorchOptimizer.update_params_with_best_balance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.generate_batch"><code class="docutils literal notranslate"><span class="pre">generate_batch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.get_initial_points"><code class="docutils literal notranslate"><span class="pre">get_initial_points()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axBOtorchOptimizer.update_state"><code class="docutils literal notranslate"><span class="pre">update_state()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.axBOtorch.html#module-optimpv.axBOtorch.axUtils">optimpv.axBOtorch.axUtils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axUtils.ConvertParamsAx"><code class="docutils literal notranslate"><span class="pre">ConvertParamsAx()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axUtils.CreateObjectiveFromAgent"><code class="docutils literal notranslate"><span class="pre">CreateObjectiveFromAgent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axUtils.get_df_ax_client_metrics"><code class="docutils literal notranslate"><span class="pre">get_df_ax_client_metrics()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.axBOtorch.html#optimpv.axBOtorch.axUtils.get_df_from_ax"><code class="docutils literal notranslate"><span class="pre">get_df_from_ax()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.axBOtorch.html#module-optimpv.axBOtorch">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.general.html">optimpv.general package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#module-optimpv.general.BaseAgent">optimpv.general.BaseAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent"><code class="docutils literal notranslate"><span class="pre">BaseAgent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.create_metrics_list"><code class="docutils literal notranslate"><span class="pre">BaseAgent.create_metrics_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.descale_dataframe"><code class="docutils literal notranslate"><span class="pre">BaseAgent.descale_dataframe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.get_all_agent_metric_names"><code class="docutils literal notranslate"><span class="pre">BaseAgent.get_all_agent_metric_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.get_all_agent_tracking_metric_names"><code class="docutils literal notranslate"><span class="pre">BaseAgent.get_all_agent_tracking_metric_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.params_descale"><code class="docutils literal notranslate"><span class="pre">BaseAgent.params_descale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.params_rescale"><code class="docutils literal notranslate"><span class="pre">BaseAgent.params_rescale()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.params_w"><code class="docutils literal notranslate"><span class="pre">BaseAgent.params_w()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.BaseAgent.BaseAgent.rescale_dataframe"><code class="docutils literal notranslate"><span class="pre">BaseAgent.rescale_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#module-optimpv.general.FitParams">optimpv.general.FitParams module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.FitParams.FitParam"><code class="docutils literal notranslate"><span class="pre">FitParam</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#module-optimpv.general.SuggestOnlyAgent">optimpv.general.SuggestOnlyAgent module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.SuggestOnlyAgent.SuggestOnlyAgent"><code class="docutils literal notranslate"><span class="pre">SuggestOnlyAgent</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#module-optimpv.general.general">optimpv.general.general module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.general.calc_metric"><code class="docutils literal notranslate"><span class="pre">calc_metric()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.general.direct_mean_euclidean_distance"><code class="docutils literal notranslate"><span class="pre">direct_mean_euclidean_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.general.inv_loss_function"><code class="docutils literal notranslate"><span class="pre">inv_loss_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.general.loss_function"><code class="docutils literal notranslate"><span class="pre">loss_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.general.mean_min_euclidean_distance"><code class="docutils literal notranslate"><span class="pre">mean_min_euclidean_distance()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.general.transform_data"><code class="docutils literal notranslate"><span class="pre">transform_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#module-optimpv.general.logger">optimpv.general.logger module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.ClassDecorator"><code class="docutils literal notranslate"><span class="pre">ClassDecorator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.ClassDecorator.decorate_callable"><code class="docutils literal notranslate"><span class="pre">ClassDecorator.decorate_callable()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.OptimpvOutputNameFilter"><code class="docutils literal notranslate"><span class="pre">OptimpvOutputNameFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.OptimpvOutputNameFilter.filter"><code class="docutils literal notranslate"><span class="pre">OptimpvOutputNameFilter.filter()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.build_file_handler"><code class="docutils literal notranslate"><span class="pre">build_file_handler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.build_stream_handler"><code class="docutils literal notranslate"><span class="pre">build_stream_handler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.disable_logger"><code class="docutils literal notranslate"><span class="pre">disable_logger</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.disable_logger.decorate_callable"><code class="docutils literal notranslate"><span class="pre">disable_logger.decorate_callable()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.disable_loggers"><code class="docutils literal notranslate"><span class="pre">disable_loggers</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.disable_loggers.decorate_callable"><code class="docutils literal notranslate"><span class="pre">disable_loggers.decorate_callable()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.get_logger"><code class="docutils literal notranslate"><span class="pre">get_logger()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.make_indices_str"><code class="docutils literal notranslate"><span class="pre">make_indices_str()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.set_optimpv_logger_levels"><code class="docutils literal notranslate"><span class="pre">set_optimpv_logger_levels()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.general.html#optimpv.general.logger.set_stderr_log_level"><code class="docutils literal notranslate"><span class="pre">set_stderr_log_level()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.general.html#module-optimpv.general">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.posterior.html">optimpv.posterior package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.posterior.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.posterior.html#module-optimpv.posterior.posterior">optimpv.posterior.posterior module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.calculate_1d_posteriors"><code class="docutils literal notranslate"><span class="pre">calculate_1d_posteriors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.calculate_2d_posteriors"><code class="docutils literal notranslate"><span class="pre">calculate_2d_posteriors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.devils_plot"><code class="docutils literal notranslate"><span class="pre">devils_plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.get_MSE_grid"><code class="docutils literal notranslate"><span class="pre">get_MSE_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.plot_1D_2D_posterior"><code class="docutils literal notranslate"><span class="pre">plot_1D_2D_posterior()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.plot_1d_posteriors"><code class="docutils literal notranslate"><span class="pre">plot_1d_posteriors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.posterior.html#optimpv.posterior.posterior.plot_density_exploration"><code class="docutils literal notranslate"><span class="pre">plot_density_exploration()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.posterior.html#module-optimpv.posterior">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.pymooOpti.html">optimpv.pymooOpti package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.pymooOpti.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.pymooOpti.html#module-optimpv.pymooOpti.pymooOptimizer">optimpv.pymooOpti.pymooOptimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.create_algorithm"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.create_algorithm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.create_callback"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.create_callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.create_problem"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.create_problem()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.existing_population"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.existing_population()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.get_best_solution"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.get_best_solution()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.get_df_from_pymoo"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.get_df_from_pymoo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.get_pareto_front"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.get_pareto_front()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.optimize"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.optimize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.plot_convergence"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.plot_convergence()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooOptimizer.update_params_with_best_balance"><code class="docutils literal notranslate"><span class="pre">PymooOptimizer.update_params_with_best_balance()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooProblem"><code class="docutils literal notranslate"><span class="pre">PymooProblem</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooProblem.create_search_space"><code class="docutils literal notranslate"><span class="pre">PymooProblem.create_search_space()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooProblem.evaluate_single"><code class="docutils literal notranslate"><span class="pre">PymooProblem.evaluate_single()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooProblem.get_all_metrics"><code class="docutils literal notranslate"><span class="pre">PymooProblem.get_all_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooProblem.parse_constraints"><code class="docutils literal notranslate"><span class="pre">PymooProblem.parse_constraints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.pymooOpti.html#optimpv.pymooOpti.pymooOptimizer.PymooProblem.reconstruct_params"><code class="docutils literal notranslate"><span class="pre">PymooProblem.reconstruct_params()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.pymooOpti.html#module-optimpv.pymooOpti">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.scipyOpti.html">optimpv.scipyOpti package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.scipyOpti.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.scipyOpti.html#module-optimpv.scipyOpti.scipyOptimizer">optimpv.scipyOpti.scipyOptimizer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.create_metrics_list"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.create_metrics_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.create_objective"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.create_objective()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.create_search_space"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.create_search_space()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.evaluate"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.evaluate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.optimize"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.optimize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.reconstruct_params"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.reconstruct_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="optimpv.scipyOpti.html#optimpv.scipyOpti.scipyOptimizer.ScipyOptimizer.update_params_with_best_balance"><code class="docutils literal notranslate"><span class="pre">ScipyOptimizer.update_params_with_best_balance()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.scipyOpti.html#module-optimpv.scipyOpti">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optimpv.tests.html">optimpv.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.tests.html#module-optimpv.tests.test_axBOtorch">optimpv.tests.test_axBOtorch module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_DOE_MOO"><code class="docutils literal notranslate"><span class="pre">test_DOE_MOO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_DOE_SOO"><code class="docutils literal notranslate"><span class="pre">test_DOE_SOO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_DOE_SOO_Turbo"><code class="docutils literal notranslate"><span class="pre">test_DOE_SOO_Turbo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_MOO_trPLtrMC"><code class="docutils literal notranslate"><span class="pre">test_MOO_trPLtrMC()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_SOO_TurBO"><code class="docutils literal notranslate"><span class="pre">test_SOO_TurBO()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_SOO_diode_fit"><code class="docutils literal notranslate"><span class="pre">test_SOO_diode_fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_diff_rec"><code class="docutils literal notranslate"><span class="pre">test_diff_rec()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_axBOtorch.test_multi_trap"><code class="docutils literal notranslate"><span class="pre">test_multi_trap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.tests.html#module-optimpv.tests.test_emcee">optimpv.tests.test_emcee module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_emcee.test_SOO_JV_fit_emcee"><code class="docutils literal notranslate"><span class="pre">test_SOO_JV_fit_emcee()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.tests.html#module-optimpv.tests.test_pymoo">optimpv.tests.test_pymoo module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_pymoo.test_DOE_MOO_pymoo"><code class="docutils literal notranslate"><span class="pre">test_DOE_MOO_pymoo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_pymoo.test_DOE_SOO_pymoo"><code class="docutils literal notranslate"><span class="pre">test_DOE_SOO_pymoo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_pymoo.test_MOO_TransferMatrix_pymoo"><code class="docutils literal notranslate"><span class="pre">test_MOO_TransferMatrix_pymoo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_pymoo.test_SOO_diode_fit_pymoo"><code class="docutils literal notranslate"><span class="pre">test_SOO_diode_fit_pymoo()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.tests.html#module-optimpv.tests.test_scipy">optimpv.tests.test_scipy module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optimpv.tests.html#optimpv.tests.test_scipy.test_SOO_diode_fit"><code class="docutils literal notranslate"><span class="pre">test_SOO_diode_fit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="optimpv.tests.html#module-optimpv.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="module-optimpv">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-optimpv" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="optimpv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="optimpv.BayesInfEmcee.html" class="btn btn-neutral float-right" title="optimpv.BayesInfEmcee package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Vincent M. Le Corre, Larry Lüer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
